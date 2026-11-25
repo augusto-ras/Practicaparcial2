@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Registro.RegistroDeProductosController">
+   <children>
+      <Text layoutX="29.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+      <Text layoutX="34.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" />
+      <Text layoutX="25.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:" />
+      <TextField fx:id="txtNombre" layoutX="88.0" layoutY="43.0" />
+      <TextField fx:id="txtPrecio" layoutX="88.0" layoutY="88.0" />
+      <Button layoutX="329.0" layoutY="134.0" mnemonicParsing="false" onAction="#btnAgregar" text="Agregar" />
+      <Button layoutX="442.0" layoutY="211.0" mnemonicParsing="false" onAction="#btnEliminar" text="Eliminar seleccionado" />
+      <TableView fx:id="tableProductos" layoutX="30.0" layoutY="179.0" prefHeight="200.0" prefWidth="358.0">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="112.0" text="Nombre" />
+          <TableColumn fx:id="colPrecio" prefWidth="129.0" text="Precio" />
+            <TableColumn fx:id="colCategoria" prefWidth="116.0" text="Categoria" />
+        </columns>
+      </TableView>
+      <ChoiceBox fx:id="choiceCategoria" layoutX="88.0" layoutY="134.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
